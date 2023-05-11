@@ -1,4 +1,4 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

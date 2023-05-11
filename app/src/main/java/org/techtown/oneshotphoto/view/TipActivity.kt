@@ -1,8 +1,9 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import org.techtown.oneshotphoto.R
 
 class TipActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

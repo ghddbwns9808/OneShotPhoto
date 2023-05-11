@@ -16,28 +16,28 @@
         android:theme="@style/Theme.OneShotPhoto"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".TipActivity"
+            android:name=".view.TipActivity"
             android:exported="false" />
         <activity
-            android:name=".ResultCreateActivity"
+            android:name=".view.ResultCreateActivity"
             android:exported="false" />
         <activity
-            android:name=".MyFilterActivity"
+            android:name=".view.MyFilterActivity"
             android:exported="false" />
         <activity
-            android:name=".BasicFilterActivity"
+            android:name=".view.BasicFilterActivity"
             android:exported="false" />
         <activity
-            android:name=".CreateFilterActivity"
+            android:name=".view.CreateFilterActivity"
             android:exported="false" />
         <activity
-            android:name=".JoinActivity"
+            android:name=".view.JoinActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

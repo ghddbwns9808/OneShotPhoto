@@ -1,4 +1,4 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,10 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.techtown.oneshotphoto.AUTH
+import org.techtown.oneshotphoto.MainActivity
+import org.techtown.oneshotphoto.NON
+import org.techtown.oneshotphoto.YES
 import org.techtown.oneshotphoto.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

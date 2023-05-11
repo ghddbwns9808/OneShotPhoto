@@ -1,4 +1,4 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
 import android.Manifest
 import android.app.Activity
@@ -24,6 +24,9 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.techtown.oneshotphoto.api.IRetrofit
+import org.techtown.oneshotphoto.R
+import org.techtown.oneshotphoto.TrainingResult
 import org.techtown.oneshotphoto.databinding.ActivityResultCreateBinding
 import retrofit2.Call
 import retrofit2.Response

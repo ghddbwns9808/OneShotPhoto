@@ -1,7 +1,9 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.api
 
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
+import org.techtown.oneshotphoto.InferenceResult
+import org.techtown.oneshotphoto.TrainingResult
+import org.techtown.oneshotphoto.filterResult
 import retrofit2.Call
 import retrofit2.http.*
 

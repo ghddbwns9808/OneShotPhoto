@@ -1,12 +1,13 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import org.techtown.oneshotphoto.databinding.ActivityJoinBinding
 import org.techtown.oneshotphoto.databinding.ActivityMainBinding
+import org.techtown.oneshotphoto.view.BasicFilterActivity
+import org.techtown.oneshotphoto.view.CreateFilterActivity
 
 
 val TAG : String = "ghddbwns"

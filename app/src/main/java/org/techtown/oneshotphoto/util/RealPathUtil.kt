@@ -1,3 +1,5 @@
+package org.techtown.oneshotphoto.util
+
 import android.annotation.SuppressLint
 import android.content.ContentUris
 import android.content.Context

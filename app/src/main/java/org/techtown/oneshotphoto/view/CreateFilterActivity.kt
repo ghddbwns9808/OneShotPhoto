@@ -1,6 +1,6 @@
-package org.techtown.oneshotphoto
+package org.techtown.oneshotphoto.view
 
-import RealPathUtil
+import org.techtown.oneshotphoto.util.RealPathUtil
 import android.Manifest
 import android.app.Activity
 import android.app.AlertDialog
@@ -10,7 +10,6 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
 import android.provider.MediaStore
 import android.util.Base64
 import android.util.Log
@@ -28,6 +27,8 @@ import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
+import org.techtown.oneshotphoto.*
+import org.techtown.oneshotphoto.api.IRetrofit
 import org.techtown.oneshotphoto.databinding.ActivityCreateFilterBinding
 import retrofit2.Call
 import retrofit2.Response
@@ -176,7 +177,7 @@ class CreateFilterActivity : AppCompatActivity() {
 
                         if(result!!.responseCode == "success"){
                             b64 = result!!.base64String.toString()
-                            Log.d(TAG, "onResponse: responseCode is success ${b64}")
+                            Log.d(TAG, "onResponse: responseCode is success $b64")
                             val resultIntent = Intent(applicationContext, ResultCreateActivity::class.java)
                             startActivityForResult(resultIntent, FLAG_CALL)
                         } else if(result!!.responseCode == "error"){
