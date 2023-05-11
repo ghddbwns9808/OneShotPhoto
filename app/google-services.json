@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298212570845",
+    "project_id": "oneshootphoto-906c0",
+    "storage_bucket": "oneshootphoto-906c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298212570845:android:3919d78f48eb7f07eacd34",
+        "android_client_info": {
+          "package_name": "org.techtown.oneshotphoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298212570845-essib7tkho7am5714t4nqmn9vi7v58c0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuKNMS0jqqlmnGfxKOINqDjg5c0e6pBgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298212570845-essib7tkho7am5714t4nqmn9vi7v58c0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

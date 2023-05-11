@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Filter Name"
+        app:boxStrokeColor="@color/myColor"
+        app:endIconMode="clear_text"
+        app:helperText="필터 이름을 영어로 입력해주세요."
+        app:helperTextEnabled="true"
+        app:hintTextColor="@color/myColor"
+        app:startIconDrawable="@drawable/ic_baseline_text_format_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDlgName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDlgSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/myColor"
+        android:text="저장"
+        android:textStyle="bold"/>
+
+</LinearLayout>

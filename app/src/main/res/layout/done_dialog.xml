@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="필터 생성이 완료되었습니다."
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDoneDlgSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/myColor"
+        android:text="확인"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    >
+
+    <com.canhub.cropper.CropImageView
+        android:id="@+id/ivCrop"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <android.widget.Button
+        android:id="@+id/btnCropOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자르기"
+        android:background="@drawable/border"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

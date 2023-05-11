@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. 서비스 이용 가능 시간"
+                android:fontFamily="@font/esamanru"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="현재 베타 버전으로 서버 비용 때문에 사용 시간에 제한을 두었습니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.4(토)~6.5(일) 2일간, 10시 ~ 22시에 서비스 이용이 가능합니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. 회원/비회원 기능"
+                android:fontFamily="@font/esamanru"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="회원/비회원 사용자 관계 없이 필터 생성과 기본 필터 사용하기 기능을 사용할 수 있습니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="비회원 사용자는 생성한 필터 저장 및 내 필터 불러오기 기능을 사용할 수 없습니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. 좋은 결과물을 얻기 위해"
+                android:fontFamily="@font/esamanru"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="얼굴 인식률을 높이기 위해서 사진 자르기 기능을 사용해보세요."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tip_crop" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/esamanru"
+                    android:text="AI 모델이 얼굴을 인식하지 못하면 필터를 생성 하지 못합니다."
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. AI가 얼굴을 인식하지 못했을 때"
+                android:fontFamily="@font/esamanru"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AI가 얼굴을 인식하지 못해도 강제로 필터를 생성할 수 있습니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="사진 자르기 기능을 통해 생성된 이미지에 대해서는 강제로 훈련이 진행되도록 설계했습니다."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="·"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="사진 자르기 버튼을 눌러 생성된 사진을 사용해보세요."
+                        android:fontFamily="@font/esamanru"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:src="@drawable/croptip"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/myColor"
+        android:paddingLeft="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        app:rippleColor="@color/white"
+        app:borderWidth="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
