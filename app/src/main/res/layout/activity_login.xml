@@ -1,112 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.LoginActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:src="@drawable/login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.268" />
+    <data>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841">
+        android:layout_height="match_parent"
+        tools:context=".view.LoginActivity">
 
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.268" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.841">
 
-            <com.google.android.material.textfield.TextInputLayout
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:hint="E-mail"
-                app:boxStrokeColor="#7D7D7D"
-                app:endIconMode="clear_text"
-                app:hintTextColor="#7D7D7D"
-                app:startIconDrawable="@drawable/ic_baseline_person_24">
+                android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:text=""/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginBottom="5dp"
+                    android:hint="E-mail"
+                    app:boxStrokeColor="#7D7D7D"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="#7D7D7D"
+                    app:startIconDrawable="@drawable/ic_baseline_person_24">
 
-            <com.google.android.material.textfield.TextInputLayout
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PassWord"
+                    app:boxStrokeColor="#7D7D7D"
+                    app:endIconMode="password_toggle"
+                    app:helperText="이메일 주소와 비밀번호를 입력하세요."
+                    app:helperTextEnabled="true"
+                    app:hintTextColor="#7D7D7D"
+                    app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:text="" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="PassWord"
-                app:boxStrokeColor="#7D7D7D"
-                app:endIconMode="password_toggle"
-                app:helperText="이메일 주소와 비밀번호를 입력하세요."
-                app:helperTextEnabled="true"
-                app:hintTextColor="#7D7D7D"
-                app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
+                android:backgroundTint="#7D7D7D"
+                android:clickable="true"
+                android:text="로그인"
+                android:textStyle="bold"
+                app:rippleColor="#545454"
+                android:onClick="btnLoginClicked"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:text=""/>
-            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#7D7D7D"
+                android:clickable="true"
+                android:text="회원가입"
+                android:textStyle="bold"
+                app:rippleColor="#545454"
+                android:onClick="btnJoinClicked"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNonUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#7D7D7D"
+                android:clickable="true"
+                android:text="비회원으로 시작"
+                android:textStyle="bold"
+                app:rippleColor="#545454"
+                android:onClick="btnNonUserClicked"/>
+
         </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#7D7D7D"
-            android:clickable="true"
-            android:text="로그인"
-            android:textStyle="bold"
-            app:rippleColor="#545454"
-            />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnJoin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#7D7D7D"
-            android:clickable="true"
-            android:text="회원가입"
-            android:textStyle="bold"
-            app:rippleColor="#545454" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnNonUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#7D7D7D"
-            android:clickable="true"
-            android:text="비회원으로 시작"
-            android:textStyle="bold"
-
-            app:rippleColor="#545454" />
-
-    </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
