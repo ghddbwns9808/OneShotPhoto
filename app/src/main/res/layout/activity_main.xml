@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -64,6 +64,16 @@
             android:backgroundTint="@color/myColor"
             android:clickable="true"
             android:text="내 필터 불러오기"
+            app:rippleColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/myColor"
+            android:clickable="true"
+            android:text="로그아웃"
             app:rippleColor="@color/white" />
     </LinearLayout>
 

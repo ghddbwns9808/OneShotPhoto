@@ -3,8 +3,13 @@ package org.techtown.oneshotphoto.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import org.techtown.oneshotphoto.AutoLoginSharedPrefs
 import org.techtown.oneshotphoto.databinding.ActivityMainBinding
 import org.techtown.oneshotphoto.view.BasicFilterActivity
 import org.techtown.oneshotphoto.view.CreateFilterActivity
@@ -37,13 +42,14 @@ val BASICFILTER: Int = 10003
 class MainActivity : AppCompatActivity() {
 
     var lastTimeBackPressed : Long = 0
-
+    private lateinit var auth: FirebaseAuth
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
 
         if(AUTH == NON){
             Toast.makeText(this, "비회원으로 로그인 했습니다.", Toast.LENGTH_SHORT).show()
@@ -74,6 +80,16 @@ class MainActivity : AppCompatActivity() {
         binding.btnTip.setOnClickListener {
             val intent = Intent(this, TipActivity::class.java)
             startActivity(intent)
+        }
+
+        // 로그아웃 기능
+        binding.btnLogout.setOnClickListener {
+            if (auth.currentUser!!.isAnonymous)
+                auth.currentUser!!.delete()
+
+            auth.signOut()
+            AutoLoginSharedPrefs(this).autoLogin = false
+            finish()
         }
     }
 

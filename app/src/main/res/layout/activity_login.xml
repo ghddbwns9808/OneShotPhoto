@@ -78,6 +78,16 @@
                         android:inputType="textPassword"
                         android:text="" />
                 </com.google.android.material.textfield.TextInputLayout>
+                
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/autoLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity = "end"
+                    android:text="자동 로그인"
+                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                    />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton

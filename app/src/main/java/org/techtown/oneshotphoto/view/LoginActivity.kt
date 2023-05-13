@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import org.techtown.oneshotphoto.AutoLoginSharedPrefs
 import org.techtown.oneshotphoto.R
 import org.techtown.oneshotphoto.databinding.ActivityLoginBinding
 
@@ -20,6 +21,27 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding  = DataBindingUtil.setContentView(this, R.layout.activity_login)
         auth = Firebase.auth
+
+        //자동 로그인 검사
+        isAutoLogin()
+
+        binding.autoLogin.isClickable = true
+        binding.autoLogin.setOnClickListener {
+            binding.autoLogin.toggle()
+        }
+
+    }
+
+    private fun isAutoLogin(){
+        if (AutoLoginSharedPrefs(this).autoLogin!!){
+            val mainIntent = Intent(this, MainActivity::class.java)
+            startActivity(mainIntent)
+        }
+    }
+
+    private fun setAutoLogin(){
+        if (binding.autoLogin.isChecked)
+            AutoLoginSharedPrefs(this).autoLogin = true
     }
 
     fun btnLoginClicked(view: View){
@@ -33,14 +55,10 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email!!, password!!)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-
-                            val user = auth.currentUser
-                            //Toast.makeText(this,"로그인 성공 uid: ${user!!.uid}", Toast.LENGTH_SHORT).show()
-                            AUTH = YES
-                            val mainIntent = Intent(this, MainActivity::class.java)
-                            startActivity(mainIntent)
+                            //자동 로그인 설정
+                            setAutoLogin()
+                            loginSuccess()
                         } else {
-
                             Toast.makeText(this, "이메일 또는 비밀번호가 틀립니다.", Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -59,18 +77,16 @@ class LoginActivity : AppCompatActivity() {
         binding.btnNonUser.setOnClickListener {
             auth.signInAnonymously().addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    //Toast.makeText(this, "익명으로 로그인 성공", Toast.LENGTH_SHORT).show()
-
-                    AUTH = NON
-
-                    val intent = Intent(this, MainActivity::class.java)
-                    finishAffinity()
-                    startActivity(intent)
+                    loginSuccess()
                 } else {
                     Toast.makeText(baseContext, "익명으로 로그인 실패.", Toast.LENGTH_SHORT).show()
-
                 }
             }
         }
+    }
+
+    private fun loginSuccess(){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }
